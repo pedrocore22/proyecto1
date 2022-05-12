@@ -41,6 +41,7 @@ body {
 p {
     font-size: 1.1rem;
     line-height: 1.5;
+    margin-bottom: 0.5rem;
 }
 
 img {
@@ -194,6 +195,11 @@ header.transparent nav a:hover {
     padding: 1rem;
 }
 
+.col-33 {
+    width: 33.333333%;
+    padding: 1rem;
+}
+
 .col-25 {
     width: 25%;
     padding: 1rem;
@@ -204,6 +210,7 @@ header.transparent nav a:hover {
         flex-direction: column;
     }
     .col-50,
+    .col-33,
     .col-25 {
        width: 100%; 
     }
@@ -226,9 +233,62 @@ header.transparent nav a:hover {
 /* Formularios */
 
 form {
-    
+    padding: 1rem;
 }
 
+input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-bottom: 1.5px solid #a97c50;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.usuario {
+    background-image: url('../img/user.svg');
+    background-repeat: no-repeat;
+    background-position: 0 3.5px;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+input.email {
+    background-image: url('../img/mail-bronce.svg');
+    background-repeat: no-repeat;
+    background-position: 0 3.5px;
+    padding-left: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
+[type="checkbox"] {
+    display: none;
+}
+
+[type="checkbox"] + label::before {
+    content: url('../img/square.svg');
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+}
+
+[type="checkbox"]:checked + label::before {
+    content: url('../img/check-square.svg');
+}
+
+.buttons {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
 
 button {
     font-size: 1rem;
@@ -244,4 +304,59 @@ button {
 button:hover {
     background-color: white;
     color: #a97c50;
+}
+
+/* Footer  */
+
+footer {
+    background-color: #424242;
+}
+
+footer.fila {
+    max-width: none;
+    justify-content: center;
+}
+
+footer.fila .col-33 {
+    max-width: 477px;
+}
+
+footer p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer p:first-child {
+    color:#a97c50;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+footer p img {
+    height: 16px;
+    margin-right: 5px;
+}
+
+footer .rrss {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .rrss img {
+    height: 36px;
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .links a {
+    color: #a97c50;
+}
+
+footer .col-33:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
