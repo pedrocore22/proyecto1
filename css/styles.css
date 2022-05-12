@@ -17,9 +17,34 @@ a {
 
 /* Generales */
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 1260px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 440px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #67666e;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Header */
@@ -71,10 +96,11 @@ header.transparent nav a:hover {
 .hero {
     width: 100%;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background-color: black;
+    overflow: hidden;
 }
 
 @keyframes animacionHero {
@@ -119,4 +145,103 @@ header.transparent nav a:hover {
 .hero div:nth-child(3) {
     background-image: url('../img/front3.jpg');
     animation-delay: 12s;
+}
+
+.hero .hero-logo {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: none;
+}
+
+.hero .hero-flecha {
+    width: 36px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 720px) {
+    .hero .hero-logo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero .hero-logo {
+        width: 70%;
+    }
+}
+
+/* Layout */
+
+.fila {
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.fila#primera {
+    margin-top: 100vh;
+}
+
+.col-50 {
+    width: 50%;
+    padding: 1rem;
+}
+
+.col-25 {
+    width: 25%;
+    padding: 1rem;
+}
+
+@media (max-width: 620px) {
+    .fila {
+        flex-direction: column;
+    }
+    .col-50,
+    .col-25 {
+       width: 100%; 
+    }
+}
+
+/* Call to actions */
+
+.caja-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-nav img {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+/* Formularios */
+
+form {
+    
+}
+
+
+button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #a97c50;
+    color: white;
+    border: 1px solid #a97c50;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 300ms linear;
+}
+
+button:hover {
+    background-color: white;
+    color: #a97c50;
 }
