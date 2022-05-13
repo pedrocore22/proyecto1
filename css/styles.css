@@ -180,6 +180,12 @@ header.transparent nav a:hover {
 
 /* Layout */
 
+#cookies {
+    display: block;
+    margin-top: -90px;
+    padding-bottom: 90px;
+}
+
 .fila {
     max-width: 1440px;
     display: flex;
@@ -196,6 +202,16 @@ header.transparent nav a:hover {
     grid-gap: 2rem;
     justify-content: center;
     margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.fila.contacto {
+    margin-top: 80px;
+}
+
+.col-100 {
+    width: 100%;
+    padding: 1rem;
 }
 
 .col-50 {
